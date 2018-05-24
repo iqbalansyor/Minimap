@@ -15,6 +15,10 @@
 		C934F36120B566E80020029F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F36020B566E80020029F /* main.m */; };
 		C934F36B20B566E90020029F /* MinimapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F36A20B566E90020029F /* MinimapTests.m */; };
 		C934F37620B566E90020029F /* MinimapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F37520B566E90020029F /* MinimapUITests.m */; };
+		C934F39120B6703F0020029F /* MinimapDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F39020B6703F0020029F /* MinimapDataSource.m */; };
+		C934F39420B67A530020029F /* MinimapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F39320B67A530020029F /* MinimapView.m */; };
+		C934F39720B689350020029F /* MiniView.m in Sources */ = {isa = PBXBuildFile; fileRef = C934F39620B689350020029F /* MiniView.m */; };
+		C934F39920B689500020029F /* MiniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C934F39820B689500020029F /* MiniView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,16 @@
 		C934F37120B566E90020029F /* MinimapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C934F37520B566E90020029F /* MinimapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinimapUITests.m; sourceTree = "<group>"; };
 		C934F37720B566E90020029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C934F38820B66BAA0020029F /* MinimapDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinimapDataSource.h; sourceTree = "<group>"; };
+		C934F38A20B66C5E0020029F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../THScrollViewMinimap/THScrollViewMinimap/ViewController.swift; sourceTree = "<group>"; };
+		C934F38B20B66C5E0020029F /* THMinimap */ = {isa = PBXFileReference; lastKnownFileType = folder; name = THMinimap; path = ../../../THScrollViewMinimap/THScrollViewMinimap/THMinimap; sourceTree = "<group>"; };
+		C934F38C20B66C5F0020029F /* MyMinimapDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyMinimapDataSource.swift; path = ../../../THScrollViewMinimap/THScrollViewMinimap/MyMinimapDataSource.swift; sourceTree = "<group>"; };
+		C934F39020B6703F0020029F /* MinimapDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinimapDataSource.m; sourceTree = "<group>"; };
+		C934F39220B67A530020029F /* MinimapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinimapView.h; sourceTree = "<group>"; };
+		C934F39320B67A530020029F /* MinimapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinimapView.m; sourceTree = "<group>"; };
+		C934F39520B689350020029F /* MiniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniView.h; sourceTree = "<group>"; };
+		C934F39620B689350020029F /* MiniView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniView.m; sourceTree = "<group>"; };
+		C934F39820B689500020029F /* MiniView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,8 @@
 		C934F35020B566E70020029F /* Minimap */ = {
 			isa = PBXGroup;
 			children = (
+				C934F38920B66C300020029F /* MinimapSwift */,
+				C934F38720B66B6B0020029F /* MinimapView */,
 				C934F35120B566E70020029F /* AppDelegate.h */,
 				C934F35220B566E70020029F /* AppDelegate.m */,
 				C934F35420B566E70020029F /* ViewController.h */,
@@ -130,6 +146,30 @@
 				C934F37720B566E90020029F /* Info.plist */,
 			);
 			path = MinimapUITests;
+			sourceTree = "<group>";
+		};
+		C934F38720B66B6B0020029F /* MinimapView */ = {
+			isa = PBXGroup;
+			children = (
+				C934F38820B66BAA0020029F /* MinimapDataSource.h */,
+				C934F39020B6703F0020029F /* MinimapDataSource.m */,
+				C934F39220B67A530020029F /* MinimapView.h */,
+				C934F39320B67A530020029F /* MinimapView.m */,
+				C934F39520B689350020029F /* MiniView.h */,
+				C934F39620B689350020029F /* MiniView.m */,
+				C934F39820B689500020029F /* MiniView.xib */,
+			);
+			path = MinimapView;
+			sourceTree = "<group>";
+		};
+		C934F38920B66C300020029F /* MinimapSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C934F38C20B66C5F0020029F /* MyMinimapDataSource.swift */,
+				C934F38B20B66C5E0020029F /* THMinimap */,
+				C934F38A20B66C5E0020029F /* ViewController.swift */,
+			);
+			path = MinimapSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +239,7 @@
 				TargetAttributes = {
 					C934F34D20B566E70020029F = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					C934F36520B566E90020029F = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -236,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C934F35E20B566E80020029F /* LaunchScreen.storyboard in Resources */,
+				C934F39920B689500020029F /* MiniView.xib in Resources */,
 				C934F35B20B566E80020029F /* Assets.xcassets in Resources */,
 				C934F35920B566E70020029F /* Main.storyboard in Resources */,
 			);
@@ -262,9 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C934F39120B6703F0020029F /* MinimapDataSource.m in Sources */,
 				C934F35620B566E70020029F /* ViewController.m in Sources */,
+				C934F39420B67A530020029F /* MinimapView.m in Sources */,
 				C934F36120B566E80020029F /* main.m in Sources */,
 				C934F35320B566E70020029F /* AppDelegate.m in Sources */,
+				C934F39720B689350020029F /* MiniView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB3A85GLA8;
 				INFOPLIST_FILE = Minimap/Info.plist;
@@ -442,6 +488,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IA.Minimap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB3A85GLA8;
 				INFOPLIST_FILE = Minimap/Info.plist;
@@ -459,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IA.Minimap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

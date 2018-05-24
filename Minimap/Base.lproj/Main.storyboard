@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,107 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1m-Sm-ACD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-5p-ldw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baI-Vp-ZeS">
+                                        <rect key="frame" x="0.0" y="0.0" width="5214" height="7300"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bench" translatesAutoresizingMaskIntoConstraints="NO" id="ZoH-WC-HcW">
+                                                <rect key="frame" x="0.0" y="0.0" width="5214" height="7300"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ZoH-WC-HcW" secondAttribute="bottom" id="9jp-Z1-gwF"/>
+                                            <constraint firstItem="ZoH-WC-HcW" firstAttribute="top" secondItem="baI-Vp-ZeS" secondAttribute="top" id="S1h-nZ-PV7"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZoH-WC-HcW" secondAttribute="trailing" id="gaC-KC-99B"/>
+                                            <constraint firstItem="ZoH-WC-HcW" firstAttribute="leading" secondItem="baI-Vp-ZeS" secondAttribute="leading" id="qSs-Or-7I6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="baI-Vp-ZeS" firstAttribute="leading" secondItem="YbE-5p-ldw" secondAttribute="leading" id="Ihb-aj-iqM"/>
+                                    <constraint firstItem="baI-Vp-ZeS" firstAttribute="top" secondItem="YbE-5p-ldw" secondAttribute="top" id="LCg-py-C0Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="baI-Vp-ZeS" secondAttribute="bottom" id="MNm-CU-vdV"/>
+                                    <constraint firstAttribute="trailing" secondItem="baI-Vp-ZeS" secondAttribute="trailing" id="nC2-st-spc"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="459-9C-Hyz" customClass="MinimapView">
+                                <rect key="frame" x="154" y="446" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5pL-uI-CYx"/>
+                                    <constraint firstAttribute="width" constant="200" id="qWd-bo-QRX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="YbE-5p-ldw" firstAttribute="top" secondItem="j1m-Sm-ACD" secondAttribute="top" id="1Ac-ub-Ml2"/>
+                            <constraint firstItem="YbE-5p-ldw" firstAttribute="bottom" secondItem="53r-CN-4zj" secondAttribute="bottom" id="4mu-io-jxm"/>
+                            <constraint firstItem="53r-CN-4zj" firstAttribute="bottom" secondItem="459-9C-Hyz" secondAttribute="bottom" constant="21" id="b0v-Jc-EBs"/>
+                            <constraint firstItem="53r-CN-4zj" firstAttribute="trailing" secondItem="459-9C-Hyz" secondAttribute="trailing" constant="21" id="b3w-Bk-jdd"/>
+                            <constraint firstItem="YbE-5p-ldw" firstAttribute="leading" secondItem="j1m-Sm-ACD" secondAttribute="leading" id="cvA-tR-bYK"/>
+                            <constraint firstAttribute="trailing" secondItem="YbE-5p-ldw" secondAttribute="trailing" id="jEj-Vx-TJ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="53r-CN-4zj"/>
                     </view>
+                    <connections>
+                        <outlet property="bigView" destination="baI-Vp-ZeS" id="WaB-QP-kxE"/>
+                        <outlet property="imageView" destination="ZoH-WC-HcW" id="GhQ-0f-2j1"/>
+                        <outlet property="minimapView" destination="459-9C-Hyz" id="cad-0G-j75"/>
+                        <outlet property="scrollView" destination="YbE-5p-ldw" id="tKY-rA-kAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="fr7-Mf-eor">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-zN-RyW">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bench" translatesAutoresizingMaskIntoConstraints="NO" id="MS7-An-5A7">
+                                    <rect key="frame" x="0.0" y="0.0" width="5214" height="7300"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="MS7-An-5A7" secondAttribute="bottom" id="AGf-wm-WsV"/>
+                                <constraint firstAttribute="trailing" secondItem="MS7-An-5A7" secondAttribute="trailing" id="BpA-vN-3oQ"/>
+                                <constraint firstItem="MS7-An-5A7" firstAttribute="leading" secondItem="sgy-zN-RyW" secondAttribute="leading" id="XAb-VJ-bM1"/>
+                                <constraint firstItem="MS7-An-5A7" firstAttribute="top" secondItem="sgy-zN-RyW" secondAttribute="top" id="o2H-dO-zGe"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-rd-cMv" customClass="THMinimapView" customModule="THScrollViewMinimap" customModuleProvider="target">
+                            <rect key="frame" x="254" y="546" width="100" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="PAX-6j-Eqk"/>
+                                <constraint firstAttribute="height" constant="100" id="nEk-WC-GCA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="HhO-w4-AOO" firstAttribute="trailing" secondItem="UeK-rd-cMv" secondAttribute="trailing" constant="21" id="8XV-pZ-r2A"/>
+                        <constraint firstItem="sgy-zN-RyW" firstAttribute="top" secondItem="fr7-Mf-eor" secondAttribute="top" id="gDk-6L-foW"/>
+                        <constraint firstItem="sgy-zN-RyW" firstAttribute="bottom" secondItem="HhO-w4-AOO" secondAttribute="bottom" id="gHP-r0-uNs"/>
+                        <constraint firstItem="sgy-zN-RyW" firstAttribute="leading" secondItem="fr7-Mf-eor" secondAttribute="leading" id="lmh-k4-4FM"/>
+                        <constraint firstAttribute="trailing" secondItem="sgy-zN-RyW" secondAttribute="trailing" id="u0F-9K-70H"/>
+                        <constraint firstItem="HhO-w4-AOO" firstAttribute="bottom" secondItem="UeK-rd-cMv" secondAttribute="bottom" constant="21" id="xej-wz-2jO"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="HhO-w4-AOO"/>
+                </view>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="bench" width="5214" height="7300"/>
+    </resources>
 </document>
